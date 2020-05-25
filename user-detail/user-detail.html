@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./user-detail.css">
+
+    <title>User detail</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <section class="breadcrumb-area bg">
+        <div class="page-title-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-text text-center">
+                        <ul>
+                            <h6>MONKEY</h6>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" style="margin: 60px 0">
+        <form th:action="@{/user/update}" th:object="${user}" method="post" id="myForm">
+            <fieldset>
+                <div class="row">
+                    <!-- Avatar -->
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="column-avatar">
+                            <div class="avatar-image text-center">
+                                <img th:if="*{avatar}" th:src="*{avatar}" class="user-avatar">
+                            </div>
+                            <div class="avatar-image text-center">
+                                <img th:unless="*{avatar}" src="203530.jpg" class="user-avatar">
+                            </div>
+                            <div style="text-align: center; margin-top: 20px">
+                                <input type='file' id="input-avatar" />
+                            </div>
+                            <input type="text" id="avatar" th:field="*{avatar}" style="display: none">
+                        </div>
+                    </div>
+
+                    <!-- User-detail -->
+
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <div class="user-detail">
+                            <h3>Chi tiết người dùng</h3>
+                            <div th:if="${param.updateSuccess}">
+                                <div class="alert alert-primary">
+                                    Cập nhật thành công !!
+                                </div>
+                            </div>
+
+                            <div th:if="${param.updateFail}">
+                                <div class="alert alert-danger">
+                                    Cập nhật thất bại !!
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tên:</label>
+                                <input type="text" class="form-control" id="name" th:field="*{name}" name="name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email :</label>
+                                <input type="email" class="form-control" id="email" th:field="*{email}" name="email" />
+                            </div>
+                            <div class="form-group text-center">
+                                <label>Giới tính :</label>
+                                <select th:field="*{gender}">
+                                <option value="0">Chưa xác định</option>
+                                <option value="1">Nam</option>
+                                <option value="2">Nữ</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ :</label>
+                                <input type="text" class="form-control" id="name" th:field="*{address}" name="address" />
+                            </div>
+                            <div class="form-group">
+                                <label>Số điện thoại :</label>
+                                <input type="text" class="form-control" id="name" th:field="*{phoneNumber}" name="phoneNumber" />
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <button class="btn btn-primary" type="submit">Cập nhật</button>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <a class="btn btn-success" th:href="@{'/user/change-password'}" role="button">Đổi mật khẩu</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

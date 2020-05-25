@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.breadcrumb-area {
+    padding: 230px 0px;
+}
+
+.bg {
+    background-image: url(http://wallpoper.com/images/00/44/71/62/ducati-1098-superbike-2_00447162.jpg);
+}
+
+.bg {
+    background-attachment: scroll;
+    background-clip: initial;
+    background-color: rgba(0, 0, 0, 0);
+    background-origin: initial;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .page-title-overlay {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background-color: rgba(189, 189, 189, 0.22);
+        opacity: .3;
+    }
+    .breadcrumb-text {
+        position: relative;
+        padding: 18px 20px;
+        display: table;
+        border: 2px solid #fff;
+        background: transparent;
+        z-index: 1;
+        text-align: center;
+        margin: 0 auto;
+        h6 {
+            color: #fff;
+            font-size: 32px;
+            line-height: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.order-detail {
+    .title-order {
+        padding: 50px 0;
+        .title {
+            color: #bb0000;
+            font-size: 30px;
+            background: #ed1b2f;
+            border-color: #ed1b2f;
+            color: #fff;
+            padding: 10px 5px;
+            width: 25%;
+            text-align: center;
+        }
+    }
+    .detail {
+        color: #fff;
+    }
+}

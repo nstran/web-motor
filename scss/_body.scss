@@ -1,0 +1,206 @@
+// BODY
+
+/* NIVO SLIDER */
+
+.section-nivo {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    .nivoSlider {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        a.nivo-imageLink {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            z-index: 6;
+            display: none;
+        }
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .nivo-slice {
+            display: block;
+            position: absolute;
+            z-index: 5;
+            height: 100%;
+            top: 0;
+        }
+        .nivo-caption {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background: #000;
+            color: #fff;
+            width: 100%;
+            z-index: 8;
+            padding: 5px 10px;
+            opacity: 0.8;
+            overflow: hidden;
+            display: none;
+            -moz-opacity: 0.8;
+            filter: alpha(opacity=8);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+    .nivo-main-image {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+    }
+    .nivo-box {
+        display: block;
+        position: absolute;
+        z-index: 5;
+        overflow: hidden;
+    }
+    .nivo-controlNav {
+        display: none;
+    }
+    .nivo-prevNav {
+        display: none;
+    }
+    .nivo-nextNav {
+        display: none;
+    }
+}
+
+// PRODUCT
+.product {
+    padding: 30px 0;
+    .title-product {
+        margin: 0 20%;
+        width: 60%;
+        color: #bb0000;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    .list-product {
+        padding: 60px 0;
+        .product-link {
+            display: block;
+            &:hover {
+                text-decoration: none;
+            }
+            .row {
+                .col-md-4 {
+                    padding: 20px 0 !important;
+                    &:nth-child(n) {
+                        visibility: hidden;
+                    }
+                }
+            }
+            .product-image {
+                img {
+                    width: 100%;
+                    transition: 0.2s;
+                    &:hover {
+                        transform: scale(1.2);
+                        transition: 0.2s;
+                    }
+                }
+            }
+            .product-detail {
+                .product-name {
+                    p {
+                        color: #111;
+                        font-weight: 700;
+                        margin-bottom: 0 !important;
+                    }
+                }
+                .product-price {
+                    p {
+                        font-weight: 700;
+                        color: #111;
+                    }
+                    .price {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ANIMATION-PRODUCT
+.slide-product-column-1 {
+    animation-name: slide;
+    animation-duration: 1s;
+    visibility: visible !important;
+}
+
+.slide-product-column-2 {
+    animation-name: slide-column-2;
+    animation-duration: 1.3s;
+    visibility: visible !important;
+}
+
+.slide-product-column-3 {
+    animation-name: slide-column-3;
+    animation-duration: 1.6s;
+    visibility: visible !important;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(90%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-column-2 {
+    0% {
+        opacity: 0;
+        transform: translateY(110%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-column-3 {
+    0% {
+        opacity: 0;
+        transform: translateY(130%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+// TRADERMARK
+.trademark {
+    .title-trademark {
+        color: #bb0000;
+        padding: 20px 0;
+    }
+    .item {
+        padding: 20px 35px;
+        height: 110px;
+        .image-box {
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

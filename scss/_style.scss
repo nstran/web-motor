@@ -1,0 +1,76 @@
+    @import './header';
+    @import './body';
+    @import './footer';
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: sans-serif;
+    }
+    
+    @media screen and (max-width: 768px) {}
+    
+    @media screen and (max-width: 992px) {
+        .header {
+            .header-col {
+                padding: 0 !important;
+            }
+            .menu-heder {
+                padding: 0;
+                // logo
+                .logo {
+                    display: none;
+                }
+                // Link
+                .menu-link {
+                    display: none !important;
+                }
+                // Search-box
+                .form-search {
+                    display: none;
+                }
+                // Menu-responsive
+                .menu-responsive {
+                    display: block;
+                    width: 100%;
+                    padding: 3px 0;
+                    // icon-menu-responsive
+                    .icon-menu {
+                        display: block !important;
+                        float: left;
+                        font-size: 20px;
+                        padding: 5px 0 0 10px;
+                        .icon {
+                            color: #fff;
+                            padding: 5px 8px;
+                            border: 1px solid #fff;
+                        }
+                    }
+                    .sidepanel li {
+                        list-style-type: none;
+                    }
+                }
+                // Logoresponsive
+                .logo-reponsive {
+                    display: block;
+                    margin-top: -10px;
+                    position: absolute;
+                    float: right;
+                    color: green;
+                    font-family: Georgia;
+                    font-weight: bold;
+                    letter-spacing: -2.5px;
+                    font-style: italic;
+                    margin-left: 32%;
+                }
+            }
+        }
+        // BODY
+        // NIVOSLIDER
+        .section-nivo {
+            padding-top: 45px;
+        }
+    }

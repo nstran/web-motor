@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/nivo-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/jquery.nivo.slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header class="header fixed bg-dark navbar-dark">
+        <div class="container-fluid menu-container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 header-col">
+                    <nav class="navbar navbar-expand-sm  menu-heder">
+                        <!-- Brand/logo -->
+                        <a class="logo" href="./index.html">
+                            <span>M</span>
+                            <span>o</span>
+                            <span>t</span>
+                            <span>o</span>
+                            <span>r</span>
+                        </a>
+                        <!-- Links -->
+                        <ul class="menu-link navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./news/news.html">Tin tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Hỗ trợ</a>
+                            </li>
+                            <div class="drop-category">
+                                <button class="category" aria-haspopup="true" aria-expanded="false" class="drop-login" type="button" data-toggle="dropdown">Danh mục<i class="fa fa-caret-down"></i></button>
+                                <div class="menu">
+                                    <li><a href="">Xe côn tay</a></li>
+                                    <li><a href="">Xe mô tô</a></li>
+                                    <li><a href="">Xe ga</a></li>
+                                    <li><a href="">Xe số</a></li>
+                                </div>
+                            </div>
+                            <form class="form-search form-inline my-2 my-lg-0">
+                                <div class="search-container">
+                                    <input type="text" placeholder="Tìm kiếm..." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                            <form class="form-inline my-2 my-lg-0" th:action="">
+                                <div sec:authorize="">
+                                    <div class="drop-login-register">
+                                        <button aria-haspopup="true" aria-expanded="false" class="drop-login" type="button" data-toggle="dropdown">
+                                           <div class="avatar">
+                                               <div class="avatar-image">
+                                                   <img src="./images/avatar.jpg" alt="">
+                                                   <span class="availability-status online"></span>
+                                               </div>
+                                               <div class="avatar-name">
+                                                   <div class="user-name-logged">
+                                                       <p class="mb-1 text-black">ABC<i class="fa fa-caret-down"></i></p>
+                                                   </div>
+                                               </div>
+                                                <div class="menu">
+                                                    <li><a href="./login/login.html">Đăng nhập</a></li>
+                                                    <li><a href="./register/register.html">Đăng ký</a></li>
+                                                    <li><a href="">Lịch sử đặt hàng</a></li>
+                                                </div>
+                                            </div>     
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </ul>
+                        <!-- LOGO RESPONSIVE -->
+                        <div class="menu-responsive">
+                            <a class="logo-reponsive" href="">
+                                <span>M</span>
+                                <span>o</span>
+                                <span>t</span>
+                                <span>o</span>
+                                <span>r</span>
+                            </a>
+
+                            <!-- MENU RESPONSIVE -->
+                            <!-- icon menu-responsive -->
+                            <div class="icon-menu">
+                                <a href="javascript:void(0);" id="onpenMenu" class="icon">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </div>
+
+                            <div id="mySidepanel" class="sidepanel">
+                                <a href="javascript:void(0)" id="closeMenu" class="closebtn">×</a>
+                                <!-- Login-responsive -->
+                                <div class="login-responsive">
+                                    <a href="./login.html" class="login">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="avatar">
+                                                    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="login-link">
+                                                    <p>Đăng nhập<span><i class="fas fa-chevron-right"></i></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Liên hệ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Diễn đàn</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="dropCategory()" class="category dropbtn rotate-icon" type="button">Danh mục<i class="fas fa-chevron-right rotate"></i></a>
+                                </li>
+                                <ul id="sub-menu" class="sub-menu">
+                                    <li>
+                                        <a href="">Xe côn tay</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Xe motor</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Xe ga</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Xe số</a>
+                                    </li>
+                                </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./news.html">Tin tức</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Hỗ trợ</a>
+                                </li>
+                            </div>
+
+
+                            <!-- icon search responsive -->
+                            <div class="icon-search">
+                                <a href="javascript:void(0);" id="search" class="search">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+
+                            <!-- Search responsive -->
+                            <div class="searchResponsive" id="searchResponsive">
+                                <a href="javascript:void(0)" class="closebtn" id="closebtn">×</a>
+                                <div class="container">
+                                    <h5 class="title-search text-center">Tìm kiếm</h5>
+                                    <input type="text" placeholder="" name="search">
+                                </div>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- NIVO SLIDER-->
+    <div class="section-nivo">
+        <section>
+            <div id="slider" class="nivoSlider">
+                <img src="https://suzuki.com.vn/images/GSX150-Bandit/BANNER-GSX150-BANDIT-NEW.png" style="width: 1349px;" />
+
+                <img src="https://suzuki.com.vn/images/GSXR150/2020-version/banner.png" style="width: 1349px;" />
+
+                <img src="https://suzuki.com.vn/images/Address/update-2018/address-top-banner-2018.png" style="width: 1349px;" />
+
+                <img src="https://suzuki.com.vn/images/Satria-F150/banner/01.png" style="width: 1349px;" />
+
+                <img src="https://suzuki.com.vn/images/GSXR150/special-color-2019/top-banner.jpg" style="width: 1349px;" />
+
+                <img src="https://suzuki.com.vn/images/GSXS150/NewColor/TopBanner1.png" style="width: 1349px;" />
+
+                <img src="https://suzuki.com.vn/images/GSXS150/NewColor/TopBanner2.png" style="width: 1349px;" />
+            </div>
+        </section>
+    </div>
+
+    <!-- PRODUCT -->
+
+    <div class="product">
+        <div class="container">
+            <h4 class="title-product text-center">Lựa chọn phong cách riêng cho bạn</h4>
+            <div class="list-product">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a class="product-link" href="./product/product-detail.html">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/GSX150-Bandit/small-thumb.png" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <p>MONKEY</p>
+                                </div>
+                                <div class="product-price text-center">
+                                    <p>price: <span class="price">1$</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="product-link" href="">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/GSXS150/NewColor/gsx-s150-thumbnail.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">SUPER CUB C125</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1$</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="product-link" href="">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/productslider/2w/4.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">PCX HIBRID</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1.000.000$</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <a class="product-link" href="./product-detail.html">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/productslider/2w/345x225-address-Ghi-Vang.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">MONKEY</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1$</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="product-link" href="">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/productslider/2w/3.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">SUPER CUB C125</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1 milion $</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="" class="product-link">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/productslider/2w/10.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <p>PCX HIBRID</p>
+                                </div>
+                                <div class="product-price text-center">
+                                    <p class="price">10.000.000 Đ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <a class="product-link" href="./product-detail.html">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/productslider/2w/7.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">MONKEY</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1$</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="product-link" href="">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/GD110/Update-02012019/gd-dac-biet-thumb.png" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">SUPER CUB C125</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1$</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="product-link" href="">
+                            <div class="product-image">
+                                <img src="https://suzuki.com.vn/images/productslider/2w/8.jpg" alt="">
+                            </div>
+                            <div class="product-detail">
+                                <div class="product-name text-center">
+                                    <a href="">PCX HIBRID</a>
+                                </div>
+                                <div class="product-price text-center">
+                                    <a href="">price: <span class="price">1.000.000$</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TRADEMARK -->
+    <div class="trademark">
+        <h3 class="title-trademark text-center">Một số thương hiệu</h3>
+        <div class="owl-carousel owl-theme owl-trademark">
+            <div class="item">
+                <div class="image-box">
+                    <img src="http://solution.com.vn/upload_images/images/2017-tin-tuc/LOGO-HONDA/Honda-logo-1.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-box">
+                    <img src="https://atad.vn/wp-content/uploads/2019/08/Suzuki-logo.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-box">
+                    <img src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/11/yamaha-motor-logo.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-box">
+                    <img src="https://seeklogo.com/images/S/sym-sanyang-motor-logo-33CD5C1BB8-seeklogo.com.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-box">
+                    <img src="https://muaxegiatot.vn/wp-content/uploads/2019/03/xe-moto-ducati-logo.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-box">
+                    <img src="https://muaxegiatot.vn/wp-content/uploads/2019/03/xe-may-piaggo-logo-thumb.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-box">
+                    <img src="https://seeklogo.net/wp-content/uploads/2014/11/kawasaki-logo-01.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="container-fluid menu-footer">
+            <div class="row row-footer">
+                <div class="col-md-4">
+                    <aside>
+                        <a class="logo-footer" href="./index.html">
+                            <span>M</span>
+                            <span>o</span>
+                            <span>t</span>
+                            <span>o</span>
+                            <span>r</span>
+                        </a>
+                        <div class="footer-list">
+                            <p>Địa chỉ : DHCN Hà Nội</p>
+                            <p><i class="fa fa-phone"></i> &nbsp; Sdt : 123456789</p>
+                            <p><i class="fa fa-envelope"></i> &nbsp; <a href="" class=""> Email : 123@gmail.com </a> </p>
+                            <p><i class="fa fa-fax"></i> &nbsp;Fax : ... </p>
+                        </div>
+                    </aside>
+                    <div class="footer-links">
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google"></i></a>
+                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div style="padding-top: 10px;" class="col-md-4">
+                    <aside class="about-us">
+                        <h4 style="padding-bottom: 12px;">Giới thiệu</h4>
+                        <a href="">
+                            <p>Về chúng tôi</p>
+                        </a>
+                        <a href="">
+                            <p>Liên hệ</p>
+                        </a>
+                        <a href="./news.html">
+                            <p>Tin tức</p>
+                        </a>
+                        <a href="">
+                            <p>Hỗ trợ</p>
+                        </a>
+                        <a href="">
+                            <p>Bản đồ</p>
+                        </a>
+                    </aside>
+                </div>
+
+                <div style="padding-top: 10px;" class="col-md-4">
+                    <aside class="latest-news">
+                        <h4 style="padding-bottom: 12px;">Bản đồ</h4>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.472089564839!2d105.73227131440777!3d21.053798892300122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455af9072ccf9%3A0xadb5f7555c46683d!2zxJDhuqFpIEjhu41jIEPDtG5nIE5naGnhu4dwIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1577712209491!5m2!1svi!2s"
+                                width="200" height="180" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p class="copy-right"> Copyright © 2019 All Rights Reserved </p>
+            </div>
+        </div>
+        <!-- BACK TO TOP -->
+        <button id="back-to-top" title="go to top"><i class="fa fa-angle-double-up"></i></button>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

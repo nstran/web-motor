@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+// Modal
+.register {
+    background-attachment: scroll;
+    background-clip: initial;
+    background-color: rgba(0, 0, 0, 0);
+    background-origin: initial;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.register {
+    background-image: url(http://tophinhnen.com/wp-content/uploads/2018/01/hinh-nen-sieu-xe-moto-24.jpg);
+    .register-form {
+        padding: 10px;
+        .register-content {
+            background-color: #fefefe;
+            margin: 6.5% auto;
+            border: 1px solid #888;
+            width: 40%;
+            .container {
+                padding: 15px;
+                .container {
+                    h2 {
+                        padding: 0 0 10px 0;
+                    }
+                    input[type=text],
+                    input[type=password],
+                    input[type=email] {
+                        width: 100%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                    }
+                    button {
+                        background-color: #4CAF50;
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        width: 100%;
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .register-form {
+        padding: 10px;
+        .register-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            border: 1px solid #888;
+            width: 100% !important;
+        }
+    }
+}
